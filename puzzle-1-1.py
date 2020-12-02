@@ -1,6 +1,3 @@
-def main():
-    print(computeEntries(getEntries(), 2020))
-
 def getEntries():
     with open('data/data-1.txt') as file:
         return [int(line.rstrip()) for line in file]
@@ -28,4 +25,5 @@ def findEntry(entries, lowerbound, upperbound, entry):
         return findEntry(entries, middle + 1, upperbound, entry)
     return -1
 
-main()
+if __name__ == "__main__":
+    print(computeEntries(getEntries(), 2020))

@@ -5,7 +5,7 @@ def getEntries():
 # complexity : nlogn
 def computeEntries(entries, total):
     entries.sort()
-    filter(lambda entry: entry < total, entries)
+    entries = list(filter(lambda entry: entry < total, entries))
     for entry in entries:
         if entry >= total:
             return -1

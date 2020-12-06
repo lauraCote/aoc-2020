@@ -16,7 +16,6 @@ def is_valid(password):
     if height[2] == 'in':
         height_valid = 59 <= int(height[1]) <= 76 
 
-
     hair_valid = len(password['hcl']) == 7 and password['hcl'][:-6] == '#' and re.match(r'[\w-]*$', password['hcl'][-6:]) != None
         
     return all([

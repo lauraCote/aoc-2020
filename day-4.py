@@ -39,4 +39,5 @@ def get_valid_passwords_count(passwords, validator):
 
 if __name__ == "__main__":
     passwords = get_passwords()
+    print(get_valid_passwords_count(passwords, contains_all_fields))
     print(get_valid_passwords_count(passwords, is_valid))
